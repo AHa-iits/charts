@@ -1,6 +1,6 @@
 # kyverno
 
-![Version: 2.5.0](https://img.shields.io/badge/Version-2.5.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.13.4](https://img.shields.io/badge/AppVersion-1.13.4-informational?style=flat-square)
+![Version: 3.0.0](https://img.shields.io/badge/Version-3.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.13.4](https://img.shields.io/badge/AppVersion-1.13.4-informational?style=flat-square)
 
 This chart wraps the upstream `kyverno` and `kyverno-policies` chart and adds a few useful policies:
   - Verify all images are signed with cosign
@@ -20,7 +20,8 @@ This chart wraps the upstream `kyverno` and `kyverno-policies` chart and adds a 
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| autoInjectDockerPullSecrets.enabled | bool | `true` |  |
+| autoInjectDockerPullSecrets.enabled | bool | `false` |  |
+| autoInjectDockerPullSecrets.existingSecretRef | string | `nil` |  |
 | autoInjectDockerPullSecrets.secrets | string | `nil` |  |
 | disallowEmptyIngressHost.enabled | bool | `true` |  |
 | disallowEmptyIngressHost.excludeNamespaces | string | `nil` |  |
